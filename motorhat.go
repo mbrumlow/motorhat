@@ -119,6 +119,19 @@ func (mh *MotorHat) Forward(m int) error {
 	return nil
 }
 
+func (mh *MotorHat) Backward(m int) error {
+
+	_, in1, in2, err := getMotor(m)
+	if err != nil {
+		return err
+	}
+
+	mh.setPin(in1, 0)
+	mh.setPin(in2, 1)
+
+	return nil
+}
+
 func (mh *MotorHat) Stop(m int) error {
 
 	_, in1, in2, err := getMotor(m)
