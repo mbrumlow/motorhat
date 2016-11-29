@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/mbrumlow/i2c"
+	"github.com/mbrumlow/goi2c"
 )
 
 const (
